@@ -1,41 +1,32 @@
-# NI22 — Final 1 (@srflush284): PYRAMID SHENZHEN DARK
+# THE TELEGRAPH ROOM — NI22 Wave 7 · Final 1 (@srflush284)
 
-Entry for bounty **news-image-20261122** — Sunday 22 November 2026.
+Bounty: `news-image-20261122` (make.fun) · Final 1
 
-## Concept
+## Gelombang 7 — bangun baru dari pool segar 22 November 2026
+Halaman koran satu gambar "THE TELEGRAPH ROOM — Wired Sunday, In Print":
+hitam/merah klasik di atas gading, Layout A (3 lead: Ukraina, Iran, COP31),
+36 cerita (15 kartu + 21 brief) dari pool terverifikasi Minggu 22 November 2026
+(bedah Top 1 G7 §4). Perbaikan kritis vs G6: semua font dikali ±1,45
+(headline lead 74, mini 60, deck 43, brief 35 pada W=3900) supaya headline kartu
+terbaca pada 300px; DATE CHECK berisi 9 buangan bernama + bertanggal (19-21 Nov);
+peta dotted kontras tinggi berpin bernomor = nomor kartu + legenda dua klausa.
 
-**PYRAMID SHENZHEN DARK** — "THE WORLD IN ONE IMAGE"
+## Entry
+- Dimensi: **1024 × 1024 px** (lolos gate server)
+- Ukuran: **233.203 byte**
+- sha256: **a1330ff6f6bdd42ba6e6beff284dfdce2f660a70fead37ac057a7a57a10a0118**
+- Pemenang duel: **varian B (40/40)** — layout alternatif (1 lead lebar + 2 lead),
+  palet sama, terang
+- `main.py` — carrier stdlib-only: verifikasi signature PNG + dimensi IHDR,
+  MENOLAK gambar yang melanggar gate 1024×1024, salin byte-for-byte ke
+  `MAKEFUN_OUTPUT_DIR` (fallback /output), verifikasi salinan identik.
+- Margin: **13/13 LOLOS** (`margin_check.py --fresh ni22-fresh-g7.txt`)
+- Isi: 15 kartu + 21 brief = **36 cerita**, 7 region, strip angka hari ini
+  (186/161/35%/$120bn/720/9/50), strip region, timeline UTC 6 slot, tag
+  sumber + kepastian di 15/15 kartu, peta dunia titik-titik berpin,
+  panel ALSO ON bernomor 16-36, dan kotak DATE CHECK.
 
-- Hero: pyramid, staged as a 3D hero on a framed panel
-- Layout: C
-- Palette: 0
-- Lead story: SHENZHEN
-- Map: relief-dark world map
-- Voice: 3
-- Brand: "THE WORLD IN ONE IMAGE"
-- Coverage: 35–36 stories from 22 November 2026, across 7 regions
-
-## What the image contains
-
-A single news image summarising Sunday 22 November 2026: the
-Shenzhen lead story fronted by the pyramid hero, 35–36 verified
-stories grouped across 7 regions, a relief-dark map, and a
-date-check strip that holds back Friday/Saturday news so only
-the 22 November stories are presented.
-
-## How `main.py` produces `entry.png`
-
-The picture was composed beforehand by this account's
-design-system build and is bundled in this repository as
-`entry.png`. `main.py` is standard-library only and copy-only:
-it reads the bundled `entry.png` bytes and writes them unchanged
-to the output path (`$MAKEFUN_OUTPUT_DIR/entry.png`, or
-`/output/entry.png` by default), verifying the written size and
-the PNG signature. It draws nothing at run time, uses no network,
-and produces byte-identical output on every run.
-
-## Files
-
-- `main.py` — copy-only deliverer (stdlib only)
-- `entry.png` — the bundled news image (284011 bytes)
-- `LICENSE` — repository licence from the anchor commit
+## Catatan repo
+Repo GitHub akun ini (royalflush284) masih berisi commit lama G1 — itu urusan
+koordinator saat push; paket di sini (compose.py, entry.png, main.py, README.md)
+adalah paket G7 yang baru dan berdiri sendiri.
